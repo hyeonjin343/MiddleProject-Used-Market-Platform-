@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+	<insert id="joinMem" parameterType="memVO">
+		insert into member (
+		    mem_no, mem_id, mem_pw, mem_nm, mem_regno1, mem_regno2,
+		    LOC, mem_detail_addr, mem_tel
+		) values (
+		    member_seq.NEXTVAL ,#{mem_id}, #{mem_pw}, #{mem_nm}, #{mem_regno1}, #{mem_regno2},
+		    #{loc}, #{mem_detail_addr}, #{mem_tel}
+		)
+	</insert>
+	
+	<select id="loginChk" parameterType="map" resultType="string">
+  		SELECT MEM_ID
+  			FROM MEMBER
+		WHERE MEM_ID = #{uId} 
+		AND MEM_PASS = #{uPw}
+  	</select>
+
+
+
+
+
+
+</mapper>
+ 
