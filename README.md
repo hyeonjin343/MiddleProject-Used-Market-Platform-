@@ -44,26 +44,31 @@ Spring Framework + MyBatis 기반의 중고 거래 웹 서비스입니다.
 ---
 
 ## 🗂 프로젝트 구조
-src
-├ board.controller # 게시판 관련 요청 처리
-├ board.vo # 게시판 데이터 객체
-├ member.controller # 회원 관련 요청 처리
-├ member.service # 회원 비즈니스 로직
-├ member.dao # DB 접근 계층
-├ member.mapper # MyBatis Mapper
-├ member.vo # 회원 데이터 객체
-└ config # Spring 설정 파일
 
-WebContent
-├ css # 스타일 파일
-├ js # JavaScript 파일
-├ include # 공통 JSP
-├ UI # 화면 관련 JSP
-├ WEB-INF # 설정 및 보호 영역
-├ insert.jsp
-├ join.jsp
-├ loginForm.jsp
-└ notice.jsp
+### 📁 src
 
-Spring MVC 패턴을 기반으로 Controller-Service-DAO 계층 구조로 설계하였으며
+- `board.controller` : 게시판 관련 요청 처리
+- `board.vo` : 게시판 데이터 객체
+- `member.controller` : 회원 관련 요청 처리
+- `member.service` : 회원 비즈니스 로직
+- `member.dao` : DB 접근 계층
+- `member.mapper` : MyBatis Mapper
+- `member.vo` : 회원 데이터 객체
+- `config` : Spring 설정 파일
+
+### 📁 WebContent
+
+- `css` : 스타일 파일
+- `js` : JavaScript 파일
+- `include` : 공통 JSP
+- `UI` : 화면 관련 JSP
+- `WEB-INF` : 설정 및 보호 영역
+- `insert.jsp`
+- `join.jsp`
+- `loginForm.jsp`
+- `notice.jsp`
+
+---
+
+Spring MVC 패턴을 기반으로 Controller-Service-DAO 계층 구조로 설계하였으며,  
 기능별(board, member) 패키지 분리를 통해 유지보수성과 확장성을 고려하였습니다.
