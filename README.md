@@ -72,3 +72,17 @@ Spring Framework + MyBatis 기반의 중고 거래 웹 서비스입니다.
 
 Spring MVC 패턴을 기반으로 Controller-Service-DAO 계층 구조로 설계하였으며,  
 기능별(board, member) 패키지 분리를 통해 유지보수성과 확장성을 고려하였습니다.
+
+## 📊 ERD
+
+### Physical ERD (Database Schema)
+
+![Physical ERD](08.물리erd.png)
+
+총 15개 테이블로 구성된 중고 거래 서비스 데이터 모델입니다.
+
+회원(MEMBER)을 중심으로 판매(SALE), 후기(REVIEW), 관심상품(WANTED) 등  
+핵심 기능 간 관계를 정규화하여 설계하였습니다.
+
+파일 업로드는 ATCH_FILE / ATCH_FILE_DETAIL 테이블로 분리하여  
+확장성과 재사용성을 고려하였습니다.
